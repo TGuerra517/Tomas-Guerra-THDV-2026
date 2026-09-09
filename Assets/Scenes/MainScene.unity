@@ -174,7 +174,6 @@ GameObject:
   - component: {fileID: 167547826}
   - component: {fileID: 167547825}
   - component: {fileID: 167547824}
-  - component: {fileID: 167547823}
   - component: {fileID: 167547822}
   m_Layer: 0
   m_Name: Esfera4 (1)
@@ -193,18 +192,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02de032cde95d624a9075358e5193cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
---- !u!114 &167547823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167547821}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6daf340954e504f8456d2328f559cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
 --- !u!135 &167547824
@@ -652,7 +639,6 @@ GameObject:
   - component: {fileID: 354722061}
   - component: {fileID: 354722060}
   - component: {fileID: 354722059}
-  - component: {fileID: 354722063}
   - component: {fileID: 354722064}
   m_Layer: 0
   m_Name: Esfera1
@@ -754,18 +740,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &354722063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354722058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6daf340954e504f8456d2328f559cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
 --- !u!114 &354722064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,7 +988,6 @@ GameObject:
   - component: {fileID: 514661579}
   - component: {fileID: 514661578}
   - component: {fileID: 514661577}
-  - component: {fileID: 514661581}
   - component: {fileID: 514661582}
   m_Layer: 0
   m_Name: Obstacle (1)
@@ -1116,18 +1089,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 114708795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &514661581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514661576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97675f7d9371e7c429ea877b1aff87cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
 --- !u!114 &514661582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,7 +1551,6 @@ GameObject:
   - component: {fileID: 789027521}
   - component: {fileID: 789027520}
   - component: {fileID: 789027519}
-  - component: {fileID: 789027523}
   - component: {fileID: 789027524}
   m_Layer: 0
   m_Name: Player
@@ -1694,18 +1654,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &789027523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789027518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05142302bf646d4f938d6998f5825a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!114 &789027524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,6 +2003,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &947029667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947029669}
+  - component: {fileID: 947029668}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947029668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947029667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43c3c96fe0f3ba4094ed8be7c22a88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PracticaClase4
+--- !u!4 &947029669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947029667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.43938, y: 11.63, z: 7.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,7 +2151,6 @@ GameObject:
   - component: {fileID: 1058261559}
   - component: {fileID: 1058261558}
   - component: {fileID: 1058261557}
-  - component: {fileID: 1058261561}
   - component: {fileID: 1058261562}
   m_Layer: 0
   m_Name: Obstacle (2)
@@ -2261,18 +2252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 114708795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1058261561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058261556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97675f7d9371e7c429ea877b1aff87cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
 --- !u!114 &1058261562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2862,7 +2841,6 @@ GameObject:
   - component: {fileID: 1558679455}
   - component: {fileID: 1558679454}
   - component: {fileID: 1558679453}
-  - component: {fileID: 1558679452}
   - component: {fileID: 1558679451}
   m_Layer: 0
   m_Name: Esfera4
@@ -2881,18 +2859,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02de032cde95d624a9075358e5193cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
---- !u!114 &1558679452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558679450}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6daf340954e504f8456d2328f559cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
 --- !u!135 &1558679453
@@ -3112,7 +3078,6 @@ GameObject:
   - component: {fileID: 1755798289}
   - component: {fileID: 1755798288}
   - component: {fileID: 1755798287}
-  - component: {fileID: 1755798286}
   - component: {fileID: 1755798285}
   m_Layer: 0
   m_Name: Esfera3
@@ -3131,18 +3096,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02de032cde95d624a9075358e5193cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
---- !u!114 &1755798286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755798284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6daf340954e504f8456d2328f559cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
 --- !u!135 &1755798287
@@ -3250,7 +3203,6 @@ GameObject:
   - component: {fileID: 1869075885}
   - component: {fileID: 1869075884}
   - component: {fileID: 1869075883}
-  - component: {fileID: 1869075882}
   - component: {fileID: 1869075881}
   m_Layer: 0
   m_Name: Esfera2
@@ -3269,18 +3221,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02de032cde95d624a9075358e5193cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
---- !u!114 &1869075882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869075880}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6daf340954e504f8456d2328f559cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotatingObject
 --- !u!135 &1869075883
@@ -3388,7 +3328,6 @@ GameObject:
   - component: {fileID: 1995228911}
   - component: {fileID: 1995228910}
   - component: {fileID: 1995228909}
-  - component: {fileID: 1995228913}
   - component: {fileID: 1995228914}
   m_Layer: 0
   m_Name: Obstacle
@@ -3490,18 +3429,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 114708795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1995228913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995228908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97675f7d9371e7c429ea877b1aff87cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
 --- !u!114 &1995228914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,3 +3463,4 @@ SceneRoots:
   - {fileID: 1515322334}
   - {fileID: 481406455}
   - {fileID: 1519945477}
+  - {fileID: 947029669}
