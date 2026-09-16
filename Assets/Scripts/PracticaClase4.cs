@@ -192,7 +192,12 @@ public class PracticaClase4 : MonoBehaviour
         void MostrarParesMayoresWhile()
 
         {
-
+            int index = 0;
+            while (index < segundosPares.Length)
+            { if (segundosPares[index]) >= 5)
+                        Debug.Log("Par: " + segundosPares[index]);
+                index++;
+            }
         }
     }
 }
