@@ -28,6 +28,7 @@ public class NPCMovement : MonoBehaviour
         {
             rb.linearVelocity = Vector3.zero;
         }
+
     }
 
 
@@ -35,4 +36,4 @@ public class NPCMovement : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, distanciaPersecucion);
     }
-}
+}  
