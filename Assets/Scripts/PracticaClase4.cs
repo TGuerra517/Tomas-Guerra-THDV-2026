@@ -172,6 +172,7 @@ public class PracticaClase4 : MonoBehaviour
             Debug.Log("Par: " + segundosPares[i]);
 
         }
+    }
         //}
         // EJERCICIO N5: Detectar segundos pares
         //Hacer un metodo basado en LogicaTimer() para indicar si el segundo actual es par
@@ -189,15 +190,16 @@ public class PracticaClase4 : MonoBehaviour
         //Crear un nuevo metodo que en vez de utilizar un for utilice un while
         //y solamente mostrar los valores mayores de 5 de la lista de los pares
 
-        void MostrarParesMayoresWhile()
+       // void MostrarParesMayoresWhile()
 
-        {
-            int index = 0;
-            while (index < segundosPares.Length)
-            { if (segundosPares[index]) >= 5)
-                        Debug.Log("Par: " + segundosPares[index]);
-                index++;
-            }
-        }
+        //{
+          //  int index = 0;
+            //while (index < segundosPares.Length)
+            //{ if (segundosPares[index]) >= 5)
+              //          Debug.Log("Par: " + segundosPares[index]);
+                //index++;
+          //  }
+        //}
     }
-}
+
+
