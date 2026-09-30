@@ -69,7 +69,7 @@ public class TP3 : MonoBehaviour
 
     void Update()
     {
-        LogicaTimer();
+        //LogicaTimer();
         //cuentaregresiva();
     }
     void LogicaTimer()
@@ -86,9 +86,15 @@ public class TP3 : MonoBehaviour
 
                 tiempo = 0;
 
+
+                //Condicion Agregada para el ejericio 5
                 if (segundos % 2 == 0)
                 {
                     Debug.Log("Segundo Par");
+                    //Agregados para el ejercicio 6
+                    segundosPares[posicionArray] = segundos;
+                    posicionArray++;
+
                 }
 
                 if (segundos >= duracion)
@@ -96,6 +102,9 @@ public class TP3 : MonoBehaviour
                     terminado = true;
 
                     Debug.Log("Timer terminado");
+
+                    MostrarNumerosPares();
+
                 }
 
             }
@@ -110,19 +119,19 @@ public class TP3 : MonoBehaviour
 
     void cuentaregresiva()
     {
-        if (!terminado) 
+        if (!terminado)
         {
-        tiempo += Time.deltaTime;
+            tiempo += Time.deltaTime;
 
             if (tiempo >= 1)
             {
                 tiemporestante--;
-                Debug.Log ("Tiempo Restante: " +  tiemporestante);
+                Debug.Log("Tiempo Restante: " + tiemporestante);
                 tiempo = 0;
             }
 
 
-            if (tiemporestante ==  0)
+            if (tiemporestante == 0)
             {
                 terminado = true;
                 Debug.Log("Tiempo cumplido");
@@ -134,11 +143,64 @@ public class TP3 : MonoBehaviour
     // EJERCICIO N5: Detectar segundos pares
     //Hacer un método basado en LogicaTimer() para indicar si el segundo actual es par.Esta indicacion la hacemos por mensaje de consola.
 
+    int[] segundosPares = new int[5];
+    int posicionArray = 0;
 
 
     //EJERCICIO N6: Guardar los segundos pares y mostrarlo
     //Modificamos LogicaTimerPar() para que guarde los segundos pares,
-    //Esto lo hacemos usando arrays, que es una estructura de datos para almacenar una colección de elementos del mismo tipo.Avanzamos por el usando un indice.Y para mostrar lo que tiene el arreglo utilizamos un for. Solo lo mostramos al final.
+    //Esto lo hacemos usando arrays, que es una estructura de datos para almacenar una colección de elementos del mismo tipo.Avanzamos por el usando un indice.
+    //Y para mostrar lo que tiene el arreglo utilizamos un for. Solo lo mostramos al final.
+
+
+
+    void MostrarNumerosPares()
+    {
+        for (int i = 0; i < segundosPares.Length; i++)
+        {
+            Debug.Log("Par: " + segundosPares[i]);
+
+        }
+    }
+
+    /*
+     EJERCICIO N7: Pasar el guardado de numeros pares a un metodo
+       Pasar el guardado de numeros pares a un metodo. Modificamos el llenar el array de numeros pares a un metodo especifico
+    */
+
+    void GuardarNumeroPar()
+    {
+        segundosPares[posicionArray] = segundos;
+        posicionArray++;
+    }
+
+    /*
+     EJERCICIO N8: Buscar valores con while
+Crear un nuevo metodo que en vez de utilizar un for utilice un while y solamente mostrar los valores mayores a 5 de la lista de los pares
+    */
+
+    void Start()
+    {
+        BuscarValoresConWhile();
+    }
+
+    void BuscarValoresConWhile()
+    {
+        int[] segundospares = new int[] { 2, 4, 6, 8, 10 };
+
+
+        int i = 0;
+
+
+        while (i < segundosPares.Length)
+        {
+
+            Debug.Log(segundosPares[i]);
+        }
+
+        i++;
+
+    }
 }
 
 
