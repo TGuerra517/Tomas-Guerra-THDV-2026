@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerStats stats;
     Rigidbody rb;
     bool estaEnElPiso;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -22,17 +24,27 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-
-
         float movimientoX = Input.GetAxis("Horizontal");
         float movimientoZ = Input.GetAxis("Vertical");
 
-        Vector3 movimiento = new Vector3(movimientoX, 0, movimientoZ);
+        // Movimiento relativo a la orientación del jugador
+        Vector3 movimiento = transform.right * movimientoX
+                           + transform.forward * movimientoZ;
 
-        rb.linearVelocity = movimiento * velocidad;
+        // Evitamos que el movimiento horizontal modifique la altura
+        movimiento.y = 0f;
+        movimiento = Vector3.ClampMagnitude(movimiento, 1f);
 
+        // Conservamos la velocidad vertical para permitir saltar y caer
+        rb.linearVelocity = new Vector3(
+            movimiento.x * velocidad,
+            rb.linearVelocity.y,
+            movimiento.z * velocidad
+        );
 
-        if (Input.GetKeyDown(KeyCode.Space) && estaEnElPiso && stats.estamina >= 5)
+        if (Input.GetKeyDown(KeyCode.Space) &&
+            estaEnElPiso &&
+            stats.estamina >= 5)
         {
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
             stats.estamina -= 5;
@@ -48,8 +60,4 @@ public class PlayerMovement : MonoBehaviour
     {
         estaEnElPiso = false;
     }
-
-
-
-
 }
