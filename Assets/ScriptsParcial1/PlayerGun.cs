@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerGun : MonoBehaviour
@@ -10,7 +11,6 @@ public class PlayerGun : MonoBehaviour
     public Camera camara;
 
     float tiempoUltimoDisparo;
-
     PlayerStats stats;
 
     void Start()
@@ -20,12 +20,19 @@ public class PlayerGun : MonoBehaviour
 
     void Update()
     {
+
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
+
         if (stats.vida <= 0)
         {
             return;
         }
 
-        if (Input.GetMouseButtonDown(0) && balas > 0 && Time.time >= tiempoUltimoDisparo + cadencia)
+        if (Input.GetMouseButtonDown(0) && balas > 0 &&
+            Time.time >= tiempoUltimoDisparo + cadencia)
         {
             Disparar();
         }
@@ -34,17 +41,22 @@ public class PlayerGun : MonoBehaviour
     void Disparar()
     {
         balas--;
-
         tiempoUltimoDisparo = Time.time;
 
         Debug.Log("DISPARO - Balas restantes: " + balas);
 
         RaycastHit hit;
 
-        if (Physics.Raycast(camara.transform.position, camara.transform.forward, out hit, rango))
+        int capasPermitidas = ~LayerMask.GetMask("Player");
 
+        if (Physics.Raycast(camara.transform.position,
+                            camara.transform.forward,
+                            out hit,
+                            rango,
+                            capasPermitidas))
         {
             Debug.Log("Raycast golpeo: " + hit.collider.name);
+
             EnemyStats enemigo = hit.collider.GetComponent<EnemyStats>();
 
             if (enemigo != null)
@@ -54,3 +66,4 @@ public class PlayerGun : MonoBehaviour
         }
     }
 }
+
